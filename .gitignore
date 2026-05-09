@@ -1,0 +1,6 @@
+node_modules/
+.browser/
+coverage/
+*.log
+data/lightgg-popularity.json
+data/manifest-cache/

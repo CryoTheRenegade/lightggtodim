@@ -1,0 +1,10 @@
+services:
+  flaresolverr:
+    image: ghcr.io/flaresolverr/flaresolverr:latest
+    container_name: lightggtodim-flaresolverr
+    environment:
+      LOG_LEVEL: info
+      TZ: America/Denver
+    ports:
+      - "8191:8191"
+    restart: unless-stopped

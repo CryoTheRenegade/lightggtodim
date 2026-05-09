@@ -1,0 +1,51 @@
+{
+  "version": "fixture-version",
+  "inventoryItems": {
+    "12345": {
+      "hash": 12345,
+      "displayProperties": { "name": "Fixture Weapon" },
+      "itemType": 3,
+      "inventory": { "tierType": 5 },
+      "sockets": {
+        "socketEntries": [
+          { "randomizedPlugSetHash": 9001 },
+          { "randomizedPlugSetHash": 9002 },
+          { "randomizedPlugSetHash": 9003 },
+          { "randomizedPlugSetHash": 9004 }
+        ]
+      }
+    },
+    "22222": {
+      "hash": 22222,
+      "displayProperties": { "name": "Blue Weapon" },
+      "itemType": 3,
+      "inventory": { "tierType": 4 },
+      "sockets": { "socketEntries": [] }
+    },
+    "33333": {
+      "hash": 33333,
+      "displayProperties": { "name": "Legendary Armor" },
+      "itemType": 2,
+      "inventory": { "tierType": 5 },
+      "sockets": { "socketEntries": [] }
+    },
+    "111": { "hash": 111, "plug": { "plugCategoryIdentifier": "barrels" } },
+    "112": { "hash": 112, "plug": { "plugCategoryIdentifier": "barrels" } },
+    "211": { "hash": 211, "plug": { "plugCategoryIdentifier": "magazines" } },
+    "311": { "hash": 311, "plug": { "plugCategoryIdentifier": "traits" } },
+    "312": { "hash": 312, "plug": { "plugCategoryIdentifier": "traits" } },
+    "411": { "hash": 411, "plug": { "plugCategoryIdentifier": "traits" } }
+  },
+  "plugSets": {
+    "9001": {
+      "hash": 9001,
+      "reusablePlugItems": [{ "plugItemHash": 111 }, { "plugItemHash": 112 }]
+    },
+    "9002": { "hash": 9002, "reusablePlugItems": [{ "plugItemHash": 211 }] },
+    "9003": {
+      "hash": 9003,
+      "reusablePlugItems": [{ "plugItemHash": 311 }, { "plugItemHash": 312 }]
+    },
+    "9004": { "hash": 9004, "reusablePlugItems": [{ "plugItemHash": 411 }] }
+  }
+}

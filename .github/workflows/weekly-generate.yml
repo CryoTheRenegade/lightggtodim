@@ -1,0 +1,82 @@
+name: Generate wishlist
+
+on:
+  schedule:
+    - cron: "0 10 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: generate-wishlist
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.20.0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Install Playwright Chromium
+        run: pnpm exec playwright install --with-deps chromium
+
+      - name: Start FlareSolverr
+        run: docker compose up -d flaresolverr
+
+      - name: Wait for FlareSolverr
+        shell: bash
+        run: |
+          for attempt in {1..30}; do
+            if curl --fail --silent --show-error \
+              --request POST \
+              --header "content-type: application/json" \
+              --data '{"cmd":"sessions.create"}' \
+              http://127.0.0.1:8191/v1 > /tmp/flaresolverr-session.json; then
+              session="$(node -e "console.log(JSON.parse(require('fs').readFileSync('/tmp/flaresolverr-session.json', 'utf8')).session || '')")"
+              if [ -n "$session" ]; then
+                curl --silent \
+                  --request POST \
+                  --header "content-type: application/json" \
+                  --data "{\"cmd\":\"sessions.destroy\",\"session\":\"$session\"}" \
+                  http://127.0.0.1:8191/v1 >/dev/null || true
+              fi
+              exit 0
+            fi
+            sleep 5
+          done
+          docker compose logs flaresolverr
+          exit 1
+
+      - name: Generate wishlist
+        run: xvfb-run -a pnpm generate
+
+      - name: Validate wishlist
+        run: pnpm validate:wishlist
+
+      - name: Stop FlareSolverr
+        if: always()
+        run: docker compose down
+
+      - name: Commit generated wishlist
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: update generated DIM wishlist"
+          file_pattern: "dist/wishlists/lightgg-popular-pvp.txt dist/wishlists/metadata.json"

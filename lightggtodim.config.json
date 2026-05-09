@@ -1,0 +1,27 @@
+{
+  "language": "en",
+  "output": {
+    "wishlistPath": "dist/wishlists/lightgg-popular-pvp.txt",
+    "metadataPath": "dist/wishlists/metadata.json"
+  },
+  "scrape": {
+    "delayMs": 2500,
+    "maxRetries": 2,
+    "profileDir": ".browser/lightgg-profile"
+  },
+  "rolls": {
+    "activity": "pvp",
+    "strategy": "strict-dim-supported-full-roll",
+    "includeUniversalPopularity": true,
+    "topBarrels": 2,
+    "topMagazines": 2,
+    "topTrait3": 3,
+    "topTrait4": 3,
+    "maxRollsPerWeapon": 36
+  },
+  "weapons": {
+    "scope": "current-random-roll-legendary",
+    "excludeSunset": true,
+    "excludeCraftingPatternsOnly": false
+  }
+}
