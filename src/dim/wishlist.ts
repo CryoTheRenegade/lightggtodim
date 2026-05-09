@@ -60,7 +60,7 @@ export function selectStrictDimRoll(
       itemHash: weapon.hash,
       itemName: weapon.name,
       perkHashes,
-      notes: ["popular-pvp", "lightgg", "full-roll", "mw-unsupported"]
+      notes: rollNotes(options.activity)
     }
   };
 }
@@ -131,7 +131,7 @@ export function selectStrictDimRolls(
             itemHash: weapon.hash,
             itemName: weapon.name,
             perkHashes,
-            notes: ["popular-pvp", "lightgg", "full-roll", "mw-unsupported"]
+            notes: rollNotes(options.activity)
           });
 
           if (rolls.length >= maxRolls) {
@@ -147,6 +147,10 @@ export function selectStrictDimRolls(
   }
 
   return { ok: true, rolls };
+}
+
+function rollNotes(activity: Activity): string[] {
+  return [`popular-${activity}`, "lightgg", "full-roll", "mw-unsupported"];
 }
 
 function normalizePerkHashes(weapon: WeaponCandidate, perkHashes: number[]): number[] {
@@ -171,10 +175,11 @@ function topPerk(
   socketKind: PopularPerk["socketKind"],
   options: RollSelectionOptions
 ): PopularPerk | undefined {
-  return perks
-    .filter((perk) => perk.socketKind === socketKind)
-    .filter((perk) => activityMatches(perk.activity, options))
-    .sort((a, b) => b.percent - a.percent || a.hash - b.hash)[0];
+  return activityCandidates(
+    perks.filter((perk) => perk.socketKind === socketKind),
+    (perk) => perk.activity,
+    options
+  ).sort((a, b) => b.percent - a.percent || a.hash - b.hash)[0];
 }
 
 function topPerkHashes(
@@ -188,10 +193,13 @@ function topPerkHashes(
   const hashes: number[] = [];
   const seen = new Set<number>();
 
-  for (const perk of perks
-    .filter((candidate) => candidate.socketKind === socketKind)
-    .filter((candidate) => activityMatches(candidate.activity, options))
-    .sort((a, b) => b.percent - a.percent || a.hash - b.hash)) {
+  const candidates = activityCandidates(
+    perks.filter((candidate) => candidate.socketKind === socketKind),
+    (candidate) => candidate.activity,
+    options
+  ).sort((a, b) => b.percent - a.percent || a.hash - b.hash);
+
+  for (const perk of candidates) {
     const normalizedHash = normalizePerkHash(weapon, socketKind, perk.hash);
     if (seen.has(normalizedHash)) {
       continue;
@@ -213,22 +221,29 @@ function topTraitCombo(
   combos: PopularTraitCombo[],
   options: RollSelectionOptions
 ): PopularTraitCombo | undefined {
-  return combos
-    .filter((combo) => activityMatches(combo.activity, options))
-    .sort(
-      (a, b) => b.percent - a.percent || a.trait3Hash - b.trait3Hash || a.trait4Hash - b.trait4Hash
-    )[0];
+  return activityCandidates(combos, (combo) => combo.activity, options).sort(
+    (a, b) => b.percent - a.percent || a.trait3Hash - b.trait3Hash || a.trait4Hash - b.trait4Hash
+  )[0];
 }
 
-function activityMatches(activity: Activity | undefined, options: RollSelectionOptions): boolean {
-  const normalized = activity ?? "unknown";
-  if (normalized === options.activity) {
-    return true;
+function activityCandidates<T>(
+  candidates: T[],
+  getActivity: (candidate: T) => Activity | undefined,
+  options: RollSelectionOptions
+): T[] {
+  const exact = candidates.filter(
+    (candidate) => (getActivity(candidate) ?? "unknown") === options.activity
+  );
+  if (exact.length > 0) {
+    return exact;
   }
-  if (options.includeUniversalPopularity && (normalized === "either" || normalized === "unknown")) {
-    return true;
+  if (!options.includeUniversalPopularity) {
+    return [];
   }
-  return false;
+  return candidates.filter((candidate) => {
+    const activity = getActivity(candidate) ?? "unknown";
+    return activity === "either" || activity === "unknown";
+  });
 }
 
 function validatePerks(weapon: WeaponCandidate, perkHashes: number[]): number[] {

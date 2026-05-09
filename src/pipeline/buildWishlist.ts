@@ -5,6 +5,7 @@ import { formatWishlist } from "../dim/format";
 import { selectStrictDimRolls } from "../dim/wishlist";
 import { lightggPopularityCacheSchema } from "../lightgg/schemas";
 import type {
+  Activity,
   DimWishlistRoll,
   LightggWeaponPopularity,
   SkippedWeapon,
@@ -20,45 +21,93 @@ export interface BuildWishlistResult {
   skipped: SkippedWeapon[];
 }
 
-export async function buildWishlist(config?: AppConfig): Promise<BuildWishlistResult> {
+export interface BuildAllWishlistsResult {
+  pvp: BuildWishlistResult;
+  pve: BuildWishlistResult;
+}
+
+interface WishlistOutputTarget {
+  activity: Extract<Activity, "pvp" | "pve">;
+  wishlistPath: string;
+  metadataPath: string;
+  title: string;
+  notesComment: string;
+}
+
+export async function buildWishlist(config?: AppConfig): Promise<BuildAllWishlistsResult> {
   const resolvedConfig = config ?? (await loadConfig());
   logger.info("Fetching Bungie manifest data...");
   const manifest = await fetchManifestData(resolvedConfig.language);
   const popularity = lightggPopularityCacheSchema.parse(
     await readJsonFile<unknown>(POPULARITY_PATH)
   );
-  const result = await buildWishlistFromData(resolvedConfig, manifest, popularity);
-
-  await writeTextFile(
-    resolvedConfig.output.wishlistPath,
-    formatWishlist(result.rolls, {
-      title: "lightggtodim Popular PvP Rolls",
-      description:
-        "Generated from light.gg popularity data. Masterworks are not included because DIM wishlists do not support them.",
-      generatedAt: new Date().toISOString(),
-      source: "light.gg popularity data via local browser session"
-    })
+  const weaponsScanned = getWeaponCandidates(manifest).length;
+  const generatedAt = new Date().toISOString();
+  const sourceUrls = Object.fromEntries(
+    popularity.map((entry) => [entry.itemHash, entry.sourceUrl])
   );
+  const targets: WishlistOutputTarget[] = [
+    {
+      activity: "pvp",
+      wishlistPath: resolvedConfig.output.wishlistPath,
+      metadataPath: resolvedConfig.output.metadataPath,
+      title: "lightggtodim Popular PvP Rolls",
+      notesComment: "light.gg popular PvP full roll; masterwork unsupported by DIM"
+    },
+    {
+      activity: "pve",
+      wishlistPath: resolvedConfig.output.pveWishlistPath,
+      metadataPath: resolvedConfig.output.pveMetadataPath,
+      title: "lightggtodim Popular PvE Rolls",
+      notesComment: "light.gg popular PvE full roll; masterwork unsupported by DIM"
+    }
+  ];
+  const results = {} as BuildAllWishlistsResult;
 
-  await writeJsonFile(resolvedConfig.output.metadataPath, {
-    generatedAt: new Date().toISOString(),
-    bungieManifestVersion: manifest.version,
-    weaponsScanned: getWeaponCandidates(manifest).length,
-    successfulWishlistEntries: result.rolls.length,
-    skippedWeapons: result.skipped.length,
-    skippedReasons: result.skipped,
-    sourceUrls: Object.fromEntries(popularity.map((entry) => [entry.itemHash, entry.sourceUrl])),
-    notes: ["DIM wishlists do not support masterworks, so masterworks are omitted."]
-  });
+  for (const target of targets) {
+    const result = await buildWishlistFromData(
+      resolvedConfig,
+      manifest,
+      popularity,
+      target.activity
+    );
+    results[target.activity] = result;
 
-  logger.info(`Wrote ${result.rolls.length} rolls to ${resolvedConfig.output.wishlistPath}`);
-  return result;
+    await writeTextFile(
+      target.wishlistPath,
+      formatWishlist(result.rolls, {
+        title: target.title,
+        description:
+          "Generated from light.gg popularity data. Masterworks are not included because DIM wishlists do not support them.",
+        generatedAt,
+        source: "light.gg popularity data via local browser session",
+        notesComment: target.notesComment
+      })
+    );
+
+    await writeJsonFile(target.metadataPath, {
+      generatedAt,
+      activity: target.activity,
+      bungieManifestVersion: manifest.version,
+      weaponsScanned,
+      successfulWishlistEntries: result.rolls.length,
+      skippedWeapons: result.skipped.length,
+      skippedReasons: result.skipped,
+      sourceUrls,
+      notes: ["DIM wishlists do not support masterworks, so masterworks are omitted."]
+    });
+
+    logger.info(`Wrote ${result.rolls.length} ${target.activity} rolls to ${target.wishlistPath}`);
+  }
+
+  return results;
 }
 
 export async function buildWishlistFromData(
   config: AppConfig,
   manifest: ManifestData,
-  popularity: LightggWeaponPopularity[]
+  popularity: LightggWeaponPopularity[],
+  activity: Activity = config.rolls.activity
 ): Promise<BuildWishlistResult> {
   const weapons = getWeaponCandidates(manifest);
   const popularityByHash = new Map(popularity.map((entry) => [entry.itemHash, entry]));
@@ -73,7 +122,7 @@ export async function buildWishlistFromData(
     }
 
     const selected = selectStrictDimRolls(weapon, entry, {
-      activity: config.rolls.activity,
+      activity,
       includeUniversalPopularity: config.rolls.includeUniversalPopularity,
       topBarrels: config.rolls.topBarrels,
       topMagazines: config.rolls.topMagazines,

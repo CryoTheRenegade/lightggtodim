@@ -79,4 +79,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: update generated DIM wishlist"
-          file_pattern: "dist/wishlists/lightgg-popular-pvp.txt dist/wishlists/metadata.json"
+          file_pattern: "dist/wishlists/lightgg-popular-pvp.txt dist/wishlists/lightgg-popular-pve.txt dist/wishlists/metadata.json dist/wishlists/metadata-pve.json"

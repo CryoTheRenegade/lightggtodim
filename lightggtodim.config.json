@@ -2,7 +2,9 @@
   "language": "en",
   "output": {
     "wishlistPath": "dist/wishlists/lightgg-popular-pvp.txt",
-    "metadataPath": "dist/wishlists/metadata.json"
+    "metadataPath": "dist/wishlists/metadata.json",
+    "pveWishlistPath": "dist/wishlists/lightgg-popular-pve.txt",
+    "pveMetadataPath": "dist/wishlists/metadata-pve.json"
   },
   "scrape": {
     "delayMs": 2500,

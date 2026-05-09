@@ -5,7 +5,9 @@ export const configSchema = z.object({
   language: z.string().default("en"),
   output: z.object({
     wishlistPath: z.string(),
-    metadataPath: z.string()
+    metadataPath: z.string(),
+    pveWishlistPath: z.string().default("dist/wishlists/lightgg-popular-pve.txt"),
+    pveMetadataPath: z.string().default("dist/wishlists/metadata-pve.json")
   }),
   scrape: z.object({
     delayMs: z.number().int().nonnegative(),

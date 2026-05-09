@@ -44,11 +44,13 @@ pnpm build
 
 `pnpm scrape` fetches the Bungie manifest, filters current legendary random-roll weapon candidates, opens light.gg item pages in Playwright Chromium, and writes normalized data to `data/lightgg-popularity.json`.
 
-`pnpm build:wishlist` reads Bungie manifest data plus `data/lightgg-popularity.json`, validates selected perks against manifest socket pools, and writes:
+`pnpm build:wishlist` reads Bungie manifest data plus `data/lightgg-popularity.json`, validates selected perks against manifest socket pools, and writes separate PvP and PvE wishlists:
 
 ```text
 dist/wishlists/lightgg-popular-pvp.txt
+dist/wishlists/lightgg-popular-pve.txt
 dist/wishlists/metadata.json
+dist/wishlists/metadata-pve.json
 ```
 
 `pnpm generate` runs scrape first, then builds the wishlist.
@@ -57,7 +59,7 @@ dist/wishlists/metadata.json
 
 1. Run `pnpm install`.
 2. Run `pnpm generate`.
-3. Review `dist/wishlists/lightgg-popular-pvp.txt`.
+3. Review `dist/wishlists/lightgg-popular-pvp.txt` and `dist/wishlists/lightgg-popular-pve.txt`.
 4. Commit and push.
 5. Use the raw GitHub URL in DIM settings.
 
@@ -65,6 +67,7 @@ Example DIM URL shape:
 
 ```text
 https://raw.githubusercontent.com/<owner>/lightggtodim/<branch>/dist/wishlists/lightgg-popular-pvp.txt
+https://raw.githubusercontent.com/<owner>/lightggtodim/<branch>/dist/wishlists/lightgg-popular-pve.txt
 ```
 
 ## Output Format
@@ -77,7 +80,7 @@ description:Generated from light.gg popularity data. Masterworks are not include
 // Generated: 2026-05-08T...
 // Source: light.gg popularity data via local browser session
 //notes:light.gg popular PvP full roll; masterwork unsupported by DIM
-dimwishlist:item=<itemHash>&perks=<barrelHash>,<magHash>,<trait3Hash>,<trait4Hash>#notes:popular-pvp%20lightgg%20full-roll%20mw-unsupported
+dimwishlist:item=<itemHash>&perks=<barrelHash>,<magHash>,<trait3Hash>,<trait4Hash>#notes:popular-pvp lightgg full-roll mw-unsupported
 ```
 
-Skipped weapons and skip reasons are written to `dist/wishlists/metadata.json`.
+The PvE file uses the same format with `title:lightggtodim Popular PvE Rolls` and `popular-pve` notes. Skipped weapons and skip reasons are written to `dist/wishlists/metadata.json` and `dist/wishlists/metadata-pve.json`.

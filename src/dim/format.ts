@@ -5,6 +5,7 @@ export interface WishlistFormatOptions {
   description: string;
   generatedAt: string;
   source: string;
+  notesComment?: string;
 }
 
 export function formatWishlist(rolls: DimWishlistRoll[], options: WishlistFormatOptions): string {
@@ -13,7 +14,7 @@ export function formatWishlist(rolls: DimWishlistRoll[], options: WishlistFormat
     `description:${options.description}`,
     `// Generated: ${options.generatedAt}`,
     `// Source: ${options.source}`,
-    `//notes:light.gg popular PvP full roll; masterwork unsupported by DIM`
+    `//notes:${options.notesComment ?? "light.gg popular full roll; masterwork unsupported by DIM"}`
   ];
 
   for (const roll of normalizeRolls(rolls)) {

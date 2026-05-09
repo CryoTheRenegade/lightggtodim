@@ -177,4 +177,74 @@ describe("roll selection", () => {
       [112, 212, 312, 412]
     ]);
   });
+
+  it("labels PvE selected rolls with PvE notes", () => {
+    const selected = selectStrictDimRolls(
+      weapon,
+      {
+        ...popularity,
+        individualPerks: popularity.individualPerks.map((perk) => ({ ...perk, activity: "pve" }))
+      },
+      {
+        activity: "pve",
+        includeUniversalPopularity: true,
+        topBarrels: 1,
+        topMagazines: 1,
+        topTrait3: 1,
+        topTrait4: 1,
+        maxRollsPerWeapon: 1
+      }
+    );
+
+    expect(selected).toEqual(
+      expect.objectContaining({
+        ok: true,
+        rolls: [
+          expect.objectContaining({
+            notes: ["popular-pve", "lightgg", "full-roll", "mw-unsupported"]
+          })
+        ]
+      })
+    );
+  });
+
+  it("prefers exact activity popularity over universal popularity", () => {
+    const selected = selectStrictDimRoll(
+      weapon,
+      {
+        ...popularity,
+        individualPerks: [
+          { hash: 112, name: "Smallbore", percent: 99, activity: "either", socketKind: "barrel" },
+          {
+            hash: 111,
+            name: "Arrowhead Brake",
+            percent: 10,
+            activity: "pve",
+            socketKind: "barrel"
+          },
+          {
+            hash: 211,
+            name: "Ricochet Rounds",
+            percent: 60,
+            activity: "pve",
+            socketKind: "magazine"
+          },
+          { hash: 311, name: "Keep Away", percent: 30, activity: "pve", socketKind: "trait3" },
+          { hash: 411, name: "Kill Clip", percent: 40, activity: "pve", socketKind: "trait4" }
+        ],
+        traitCombos: []
+      },
+      {
+        activity: "pve",
+        includeUniversalPopularity: true
+      }
+    );
+
+    expect(selected).toEqual(
+      expect.objectContaining({
+        ok: true,
+        roll: expect.objectContaining({ perkHashes: [111, 211, 311, 411] })
+      })
+    );
+  });
 });
