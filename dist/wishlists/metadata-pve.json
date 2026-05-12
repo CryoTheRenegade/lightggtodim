@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-05-09T07:47:11.277Z",
+  "generatedAt": "2026-05-12T02:03:58.002Z",
   "activity": "pve",
   "bungieManifestVersion": "243523.26.04.28.2000-3-bnet.64859",
   "weaponsScanned": 1227,
-  "successfulWishlistEntries": 43520,
-  "skippedWeapons": 15,
+  "successfulWishlistEntries": 43528,
+  "skippedWeapons": 14,
   "skippedReasons": [
     {
       "itemHash": 1904170910,
@@ -69,7 +69,7 @@
     {
       "itemHash": 3757612024,
       "itemName": "Luna's Howl",
-      "reason": "missing strict full-roll popularity data",
+      "reason": "no light.gg popularity data",
       "sourceUrl": "https://www.light.gg/db/items/3757612024/"
     },
     {
@@ -77,12 +77,6 @@
       "itemName": "Quickfang",
       "reason": "missing strict full-roll popularity data",
       "sourceUrl": "https://www.light.gg/db/items/2782325300/"
-    },
-    {
-      "itemHash": 3098328572,
-      "itemName": "The Recluse",
-      "reason": "missing strict full-roll popularity data",
-      "sourceUrl": "https://www.light.gg/db/items/3098328572/"
     },
     {
       "itemHash": 569799273,
@@ -1176,7 +1170,6 @@
     "3751622019": "https://www.light.gg/db/items/3751622019/",
     "3753063346": "https://www.light.gg/db/items/3753063346/",
     "3754408118": "https://www.light.gg/db/items/3754408118/",
-    "3757612024": "https://www.light.gg/db/items/3757612024/",
     "3776129137": "https://www.light.gg/db/items/3776129137/",
     "3776430252": "https://www.light.gg/db/items/3776430252/",
     "3782662983": "https://www.light.gg/db/items/3782662983/",
