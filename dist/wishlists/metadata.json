@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-08-03T18:45:47.584Z",
+  "generatedAt": "2026-08-17T14:49:39.327Z",
   "activity": "pvp",
   "bungieManifestVersion": "244213.26.06.29.2000-1-bnet.65583",
   "weaponsScanned": 1595,
-  "successfulWishlistEntries": 56304,
-  "skippedWeapons": 28,
+  "successfulWishlistEntries": 56556,
+  "skippedWeapons": 21,
   "skippedReasons": [
     {
-      "itemHash": 2764074355,
-      "itemName": "A Sudden Death (Adept)",
+      "itemHash": 1904170910,
+      "itemName": "A Sudden Death",
       "reason": "no light.gg popularity data",
-      "sourceUrl": "https://www.light.gg/db/items/2764074355/"
+      "sourceUrl": "https://www.light.gg/db/items/1904170910/"
     },
     {
       "itemHash": 4278664152,
@@ -19,40 +19,16 @@
       "sourceUrl": "https://www.light.gg/db/items/4278664152/"
     },
     {
-      "itemHash": 2187337757,
-      "itemName": "Arctic Haze",
+      "itemHash": 2631356658,
+      "itemName": "Blast Furnace",
       "reason": "missing strict full-roll popularity data",
-      "sourceUrl": "https://www.light.gg/db/items/2187337757/"
-    },
-    {
-      "itemHash": 720351795,
-      "itemName": "Arsenic Bite-4b",
-      "reason": "missing strict full-roll popularity data",
-      "sourceUrl": "https://www.light.gg/db/items/720351795/"
-    },
-    {
-      "itemHash": 1479562935,
-      "itemName": "Aurora Dawn",
-      "reason": "missing strict full-roll popularity data",
-      "sourceUrl": "https://www.light.gg/db/items/1479562935/"
-    },
-    {
-      "itemHash": 2601084711,
-      "itemName": "Bane of Sorrow",
-      "reason": "missing strict full-roll popularity data",
-      "sourceUrl": "https://www.light.gg/db/items/2601084711/"
+      "sourceUrl": "https://www.light.gg/db/items/2631356658/"
     },
     {
       "itemHash": 2782325302,
       "itemName": "Crown-Splitter",
       "reason": "missing strict full-roll popularity data",
       "sourceUrl": "https://www.light.gg/db/items/2782325302/"
-    },
-    {
-      "itemHash": 2511482352,
-      "itemName": "Cynosure",
-      "reason": "missing strict full-roll popularity data",
-      "sourceUrl": "https://www.light.gg/db/items/2511482352/"
     },
     {
       "itemHash": 569799274,
@@ -73,12 +49,6 @@
       "sourceUrl": "https://www.light.gg/db/items/2112909414/"
     },
     {
-      "itemHash": 2228325504,
-      "itemName": "Edge Transit",
-      "reason": "missing strict full-roll popularity data",
-      "sourceUrl": "https://www.light.gg/db/items/2228325504/"
-    },
-    {
       "itemHash": 2782325301,
       "itemName": "Eternity's Edge",
       "reason": "missing strict full-roll popularity data",
@@ -87,7 +57,7 @@
     {
       "itemHash": 232119851,
       "itemName": "Frozen Orbit",
-      "reason": "missing strict full-roll popularity data",
+      "reason": "no light.gg popularity data",
       "sourceUrl": "https://www.light.gg/db/items/232119851/"
     },
     {
@@ -103,22 +73,22 @@
       "sourceUrl": "https://www.light.gg/db/items/3371413057/"
     },
     {
-      "itemHash": 2041617874,
-      "itemName": "IRONWOOD 03",
+      "itemHash": 850999853,
+      "itemName": "Hammerhead",
       "reason": "missing strict full-roll popularity data",
-      "sourceUrl": "https://www.light.gg/db/items/2041617874/"
+      "sourceUrl": "https://www.light.gg/db/items/850999853/"
     },
     {
-      "itemHash": 2499720827,
-      "itemName": "Midnight Coup",
+      "itemHash": 3329218848,
+      "itemName": "Judgment (Adept)",
       "reason": "missing strict full-roll popularity data",
-      "sourceUrl": "https://www.light.gg/db/items/2499720827/"
+      "sourceUrl": "https://www.light.gg/db/items/3329218848/"
     },
     {
-      "itemHash": 1832481283,
-      "itemName": "Positive Outlook",
-      "reason": "missing strict full-roll popularity data",
-      "sourceUrl": "https://www.light.gg/db/items/1832481283/"
+      "itemHash": 749483159,
+      "itemName": "Prosecutor (Adept)",
+      "reason": "no light.gg popularity data",
+      "sourceUrl": "https://www.light.gg/db/items/749483159/"
     },
     {
       "itemHash": 2782325300,
@@ -127,16 +97,10 @@
       "sourceUrl": "https://www.light.gg/db/items/2782325300/"
     },
     {
-      "itemHash": 2557966895,
-      "itemName": "Sorrow's Verse",
+      "itemHash": 1802315656,
+      "itemName": "Reckless Oracle",
       "reason": "missing strict full-roll popularity data",
-      "sourceUrl": "https://www.light.gg/db/items/2557966895/"
-    },
-    {
-      "itemHash": 2152350211,
-      "itemName": "Survivor's Epitaph",
-      "reason": "no light.gg popularity data",
-      "sourceUrl": "https://www.light.gg/db/items/2152350211/"
+      "sourceUrl": "https://www.light.gg/db/items/1802315656/"
     },
     {
       "itemHash": 2925315757,
@@ -145,16 +109,10 @@
       "sourceUrl": "https://www.light.gg/db/items/2925315757/"
     },
     {
-      "itemHash": 2839128618,
-      "itemName": "The Keening",
-      "reason": "no light.gg popularity data",
-      "sourceUrl": "https://www.light.gg/db/items/2839128618/"
-    },
-    {
-      "itemHash": 3098328572,
-      "itemName": "The Recluse",
+      "itemHash": 4206550094,
+      "itemName": "The Ringing Nail",
       "reason": "missing strict full-roll popularity data",
-      "sourceUrl": "https://www.light.gg/db/items/3098328572/"
+      "sourceUrl": "https://www.light.gg/db/items/4206550094/"
     },
     {
       "itemHash": 950894542,
@@ -257,7 +215,6 @@
     "219610523": "https://www.light.gg/db/items/219610523/",
     "222606050": "https://www.light.gg/db/items/222606050/",
     "231031173": "https://www.light.gg/db/items/231031173/",
-    "232119851": "https://www.light.gg/db/items/232119851/",
     "232928045": "https://www.light.gg/db/items/232928045/",
     "233402416": "https://www.light.gg/db/items/233402416/",
     "233423981": "https://www.light.gg/db/items/233423981/",
@@ -468,7 +425,6 @@
     "739029153": "https://www.light.gg/db/items/739029153/",
     "747743636": "https://www.light.gg/db/items/747743636/",
     "747743637": "https://www.light.gg/db/items/747743637/",
-    "749483159": "https://www.light.gg/db/items/749483159/",
     "751880654": "https://www.light.gg/db/items/751880654/",
     "755130877": "https://www.light.gg/db/items/755130877/",
     "766122634": "https://www.light.gg/db/items/766122634/",
@@ -859,7 +815,6 @@
     "1893967086": "https://www.light.gg/db/items/1893967086/",
     "1896309757": "https://www.light.gg/db/items/1896309757/",
     "1903182562": "https://www.light.gg/db/items/1903182562/",
-    "1904170910": "https://www.light.gg/db/items/1904170910/",
     "1905934655": "https://www.light.gg/db/items/1905934655/",
     "1907698332": "https://www.light.gg/db/items/1907698332/",
     "1911060537": "https://www.light.gg/db/items/1911060537/",
@@ -955,6 +910,7 @@
     "2150012406": "https://www.light.gg/db/items/2150012406/",
     "2150012407": "https://www.light.gg/db/items/2150012407/",
     "2150643740": "https://www.light.gg/db/items/2150643740/",
+    "2152350211": "https://www.light.gg/db/items/2152350211/",
     "2152484073": "https://www.light.gg/db/items/2152484073/",
     "2154059444": "https://www.light.gg/db/items/2154059444/",
     "2155534128": "https://www.light.gg/db/items/2155534128/",
@@ -1187,6 +1143,7 @@
     "2761869150": "https://www.light.gg/db/items/2761869150/",
     "2763843898": "https://www.light.gg/db/items/2763843898/",
     "2763843899": "https://www.light.gg/db/items/2763843899/",
+    "2764074355": "https://www.light.gg/db/items/2764074355/",
     "2765451288": "https://www.light.gg/db/items/2765451288/",
     "2765451289": "https://www.light.gg/db/items/2765451289/",
     "2765451290": "https://www.light.gg/db/items/2765451290/",
@@ -1225,6 +1182,7 @@
     "2831259643": "https://www.light.gg/db/items/2831259643/",
     "2832639510": "https://www.light.gg/db/items/2832639510/",
     "2838279629": "https://www.light.gg/db/items/2838279629/",
+    "2839128618": "https://www.light.gg/db/items/2839128618/",
     "2839600459": "https://www.light.gg/db/items/2839600459/",
     "2846261712": "https://www.light.gg/db/items/2846261712/",
     "2848549302": "https://www.light.gg/db/items/2848549302/",
