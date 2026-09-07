@@ -1,28 +1,58 @@
 {
-  "generatedAt": "2026-08-31T22:31:14.298Z",
+  "generatedAt": "2026-09-07T20:15:52.098Z",
   "activity": "pvp",
-  "bungieManifestVersion": "244213.26.06.29.2000-1-bnet.65583",
+  "bungieManifestVersion": "244213.26.06.29.2000-1-bnet.65864",
   "weaponsScanned": 1595,
-  "successfulWishlistEntries": 56652,
-  "skippedWeapons": 19,
+  "successfulWishlistEntries": 56316,
+  "skippedWeapons": 26,
   "skippedReasons": [
+    {
+      "itemHash": 3615748501,
+      "itemName": "A Good Shout",
+      "reason": "missing strict full-roll popularity data",
+      "sourceUrl": "https://www.light.gg/db/items/3615748501/"
+    },
+    {
+      "itemHash": 1904170910,
+      "itemName": "A Sudden Death",
+      "reason": "missing strict full-roll popularity data",
+      "sourceUrl": "https://www.light.gg/db/items/1904170910/"
+    },
     {
       "itemHash": 2764074355,
       "itemName": "A Sudden Death (Adept)",
-      "reason": "no light.gg popularity data",
+      "reason": "missing strict full-roll popularity data",
       "sourceUrl": "https://www.light.gg/db/items/2764074355/"
     },
     {
-      "itemHash": 4278664152,
-      "itemName": "Alone as a god",
+      "itemHash": 2601084711,
+      "itemName": "Bane of Sorrow",
       "reason": "missing strict full-roll popularity data",
-      "sourceUrl": "https://www.light.gg/db/items/4278664152/"
+      "sourceUrl": "https://www.light.gg/db/items/2601084711/"
+    },
+    {
+      "itemHash": 525750263,
+      "itemName": "Black Scorpion-4sr",
+      "reason": "missing strict full-roll popularity data",
+      "sourceUrl": "https://www.light.gg/db/items/525750263/"
     },
     {
       "itemHash": 2533990645,
       "itemName": "Blast Furnace",
       "reason": "missing strict full-roll popularity data",
       "sourceUrl": "https://www.light.gg/db/items/2533990645/"
+    },
+    {
+      "itemHash": 4062069077,
+      "itemName": "Conspiracy Honed",
+      "reason": "missing strict full-roll popularity data",
+      "sourceUrl": "https://www.light.gg/db/items/4062069077/"
+    },
+    {
+      "itemHash": 577528837,
+      "itemName": "Contingency Plan",
+      "reason": "missing strict full-roll popularity data",
+      "sourceUrl": "https://www.light.gg/db/items/577528837/"
     },
     {
       "itemHash": 2782325302,
@@ -55,12 +85,6 @@
       "sourceUrl": "https://www.light.gg/db/items/2782325301/"
     },
     {
-      "itemHash": 232119851,
-      "itemName": "Frozen Orbit",
-      "reason": "missing strict full-roll popularity data",
-      "sourceUrl": "https://www.light.gg/db/items/232119851/"
-    },
-    {
       "itemHash": 569799275,
       "itemName": "Goldtusk",
       "reason": "missing strict full-roll popularity data",
@@ -85,16 +109,34 @@
       "sourceUrl": "https://www.light.gg/db/items/2782325300/"
     },
     {
-      "itemHash": 1802315656,
-      "itemName": "Reckless Oracle",
+      "itemHash": 1066598837,
+      "itemName": "Relentless (Adept)",
       "reason": "missing strict full-roll popularity data",
-      "sourceUrl": "https://www.light.gg/db/items/1802315656/"
+      "sourceUrl": "https://www.light.gg/db/items/1066598837/"
     },
     {
-      "itemHash": 4043921923,
-      "itemName": "The Mountaintop",
+      "itemHash": 2925315757,
+      "itemName": "Tempered Dynamo",
       "reason": "missing strict full-roll popularity data",
-      "sourceUrl": "https://www.light.gg/db/items/4043921923/"
+      "sourceUrl": "https://www.light.gg/db/items/2925315757/"
+    },
+    {
+      "itemHash": 1185633760,
+      "itemName": "The Inquisitor",
+      "reason": "missing strict full-roll popularity data",
+      "sourceUrl": "https://www.light.gg/db/items/1185633760/"
+    },
+    {
+      "itemHash": 2185327324,
+      "itemName": "The Inquisitor",
+      "reason": "missing strict full-roll popularity data",
+      "sourceUrl": "https://www.light.gg/db/items/2185327324/"
+    },
+    {
+      "itemHash": 3098328572,
+      "itemName": "The Recluse",
+      "reason": "missing strict full-roll popularity data",
+      "sourceUrl": "https://www.light.gg/db/items/3098328572/"
     },
     {
       "itemHash": 4206550094,
@@ -1134,6 +1176,7 @@
     "2761869150": "https://www.light.gg/db/items/2761869150/",
     "2763843898": "https://www.light.gg/db/items/2763843898/",
     "2763843899": "https://www.light.gg/db/items/2763843899/",
+    "2764074355": "https://www.light.gg/db/items/2764074355/",
     "2765451288": "https://www.light.gg/db/items/2765451288/",
     "2765451289": "https://www.light.gg/db/items/2765451289/",
     "2765451290": "https://www.light.gg/db/items/2765451290/",
