@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-09-14T21:23:12.093Z",
+  "generatedAt": "2026-09-21T20:22:10.081Z",
   "activity": "pvp",
   "bungieManifestVersion": "244213.26.06.29.2000-1-bnet.65864",
   "weaponsScanned": 1595,
-  "successfulWishlistEntries": 56528,
-  "skippedWeapons": 22,
+  "successfulWishlistEntries": 56640,
+  "skippedWeapons": 17,
   "skippedReasons": [
     {
-      "itemHash": 1471212226,
-      "itemName": "Acasia's Dejection",
+      "itemHash": 4278664152,
+      "itemName": "Alone as a god",
       "reason": "missing strict full-roll popularity data",
-      "sourceUrl": "https://www.light.gg/db/items/1471212226/"
+      "sourceUrl": "https://www.light.gg/db/items/4278664152/"
     },
     {
       "itemHash": 2601084711,
@@ -49,6 +49,12 @@
       "sourceUrl": "https://www.light.gg/db/items/2112909414/"
     },
     {
+      "itemHash": 2228325504,
+      "itemName": "Edge Transit",
+      "reason": "missing strict full-roll popularity data",
+      "sourceUrl": "https://www.light.gg/db/items/2228325504/"
+    },
+    {
       "itemHash": 2782325301,
       "itemName": "Eternity's Edge",
       "reason": "missing strict full-roll popularity data",
@@ -67,34 +73,10 @@
       "sourceUrl": "https://www.light.gg/db/items/3371413057/"
     },
     {
-      "itemHash": 3813721211,
-      "itemName": "Last Thursday",
+      "itemHash": 1773934241,
+      "itemName": "Judgment",
       "reason": "missing strict full-roll popularity data",
-      "sourceUrl": "https://www.light.gg/db/items/3813721211/"
-    },
-    {
-      "itemHash": 792755504,
-      "itemName": "Nightshade",
-      "reason": "missing strict full-roll popularity data",
-      "sourceUrl": "https://www.light.gg/db/items/792755504/"
-    },
-    {
-      "itemHash": 3849810018,
-      "itemName": "Pardon Our Dust",
-      "reason": "missing strict full-roll popularity data",
-      "sourceUrl": "https://www.light.gg/db/items/3849810018/"
-    },
-    {
-      "itemHash": 3465233192,
-      "itemName": "Point of the Stag",
-      "reason": "missing strict full-roll popularity data",
-      "sourceUrl": "https://www.light.gg/db/items/3465233192/"
-    },
-    {
-      "itemHash": 2129814338,
-      "itemName": "Prosecutor",
-      "reason": "missing strict full-roll popularity data",
-      "sourceUrl": "https://www.light.gg/db/items/2129814338/"
+      "sourceUrl": "https://www.light.gg/db/items/1773934241/"
     },
     {
       "itemHash": 2782325300,
@@ -103,28 +85,16 @@
       "sourceUrl": "https://www.light.gg/db/items/2782325300/"
     },
     {
-      "itemHash": 268260372,
-      "itemName": "Regnant",
-      "reason": "missing strict full-roll popularity data",
-      "sourceUrl": "https://www.light.gg/db/items/268260372/"
-    },
-    {
       "itemHash": 4043921923,
       "itemName": "The Mountaintop",
       "reason": "missing strict full-roll popularity data",
       "sourceUrl": "https://www.light.gg/db/items/4043921923/"
     },
     {
-      "itemHash": 2492081469,
-      "itemName": "The Number",
+      "itemHash": 4206550094,
+      "itemName": "The Ringing Nail",
       "reason": "missing strict full-roll popularity data",
-      "sourceUrl": "https://www.light.gg/db/items/2492081469/"
-    },
-    {
-      "itemHash": 3098328572,
-      "itemName": "The Recluse",
-      "reason": "missing strict full-roll popularity data",
-      "sourceUrl": "https://www.light.gg/db/items/3098328572/"
+      "sourceUrl": "https://www.light.gg/db/items/4206550094/"
     },
     {
       "itemHash": 569799273,
