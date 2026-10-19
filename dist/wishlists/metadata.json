@@ -1,11 +1,17 @@
 {
-  "generatedAt": "2026-10-05T22:45:54.143Z",
+  "generatedAt": "2026-10-19T20:28:54.474Z",
   "activity": "pvp",
   "bungieManifestVersion": "244213.26.06.29.2000-1-bnet.65864",
   "weaponsScanned": 1595,
-  "successfulWishlistEntries": 56608,
-  "skippedWeapons": 19,
+  "successfulWishlistEntries": 56816,
+  "skippedWeapons": 14,
   "skippedReasons": [
+    {
+      "itemHash": 1904170910,
+      "itemName": "A Sudden Death",
+      "reason": "missing strict full-roll popularity data",
+      "sourceUrl": "https://www.light.gg/db/items/1904170910/"
+    },
     {
       "itemHash": 4278664152,
       "itemName": "Alone as a god",
@@ -17,12 +23,6 @@
       "itemName": "Bane of Sorrow",
       "reason": "missing strict full-roll popularity data",
       "sourceUrl": "https://www.light.gg/db/items/2601084711/"
-    },
-    {
-      "itemHash": 2066434718,
-      "itemName": "Canis Major",
-      "reason": "missing strict full-roll popularity data",
-      "sourceUrl": "https://www.light.gg/db/items/2066434718/"
     },
     {
       "itemHash": 2782325302,
@@ -67,46 +67,16 @@
       "sourceUrl": "https://www.light.gg/db/items/3371413057/"
     },
     {
-      "itemHash": 1289796511,
-      "itemName": "Iterative Loop",
-      "reason": "missing strict full-roll popularity data",
-      "sourceUrl": "https://www.light.gg/db/items/1289796511/"
-    },
-    {
-      "itemHash": 3634548598,
-      "itemName": "Jorum's Claw",
-      "reason": "missing strict full-roll popularity data",
-      "sourceUrl": "https://www.light.gg/db/items/3634548598/"
-    },
-    {
-      "itemHash": 2129814338,
-      "itemName": "Prosecutor",
-      "reason": "missing strict full-roll popularity data",
-      "sourceUrl": "https://www.light.gg/db/items/2129814338/"
-    },
-    {
       "itemHash": 2782325300,
       "itemName": "Quickfang",
       "reason": "missing strict full-roll popularity data",
       "sourceUrl": "https://www.light.gg/db/items/2782325300/"
     },
     {
-      "itemHash": 2490460292,
-      "itemName": "Stryker's Sure-Hand",
+      "itemHash": 4206550094,
+      "itemName": "The Ringing Nail",
       "reason": "missing strict full-roll popularity data",
-      "sourceUrl": "https://www.light.gg/db/items/2490460292/"
-    },
-    {
-      "itemHash": 3704653637,
-      "itemName": "Stryker's Sure-Hand",
-      "reason": "missing strict full-roll popularity data",
-      "sourceUrl": "https://www.light.gg/db/items/3704653637/"
-    },
-    {
-      "itemHash": 1447836603,
-      "itemName": "Subjunctive",
-      "reason": "missing strict full-roll popularity data",
-      "sourceUrl": "https://www.light.gg/db/items/1447836603/"
+      "sourceUrl": "https://www.light.gg/db/items/4206550094/"
     },
     {
       "itemHash": 569799273,
