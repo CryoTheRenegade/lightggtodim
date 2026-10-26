@@ -1,22 +1,16 @@
 {
-  "generatedAt": "2026-10-19T20:28:54.474Z",
+  "generatedAt": "2026-10-26T21:49:32.458Z",
   "activity": "pve",
-  "bungieManifestVersion": "244213.26.06.29.2000-1-bnet.65864",
+  "bungieManifestVersion": "245114.26.10.13.2000-1-bnet.66137",
   "weaponsScanned": 1595,
-  "successfulWishlistEntries": 56816,
-  "skippedWeapons": 14,
+  "successfulWishlistEntries": 56748,
+  "skippedWeapons": 17,
   "skippedReasons": [
     {
-      "itemHash": 1904170910,
-      "itemName": "A Sudden Death",
+      "itemHash": 2764074355,
+      "itemName": "A Sudden Death (Adept)",
       "reason": "missing strict full-roll popularity data",
-      "sourceUrl": "https://www.light.gg/db/items/1904170910/"
-    },
-    {
-      "itemHash": 4278664152,
-      "itemName": "Alone as a god",
-      "reason": "missing strict full-roll popularity data",
-      "sourceUrl": "https://www.light.gg/db/items/4278664152/"
+      "sourceUrl": "https://www.light.gg/db/items/2764074355/"
     },
     {
       "itemHash": 2601084711,
@@ -67,16 +61,40 @@
       "sourceUrl": "https://www.light.gg/db/items/3371413057/"
     },
     {
+      "itemHash": 850999853,
+      "itemName": "Hammerhead",
+      "reason": "missing strict full-roll popularity data",
+      "sourceUrl": "https://www.light.gg/db/items/850999853/"
+    },
+    {
+      "itemHash": 2979764077,
+      "itemName": "No Feelings",
+      "reason": "missing strict full-roll popularity data",
+      "sourceUrl": "https://www.light.gg/db/items/2979764077/"
+    },
+    {
+      "itemHash": 749483159,
+      "itemName": "Prosecutor (Adept)",
+      "reason": "no light.gg popularity data",
+      "sourceUrl": "https://www.light.gg/db/items/749483159/"
+    },
+    {
       "itemHash": 2782325300,
       "itemName": "Quickfang",
       "reason": "missing strict full-roll popularity data",
       "sourceUrl": "https://www.light.gg/db/items/2782325300/"
     },
     {
-      "itemHash": 4206550094,
-      "itemName": "The Ringing Nail",
-      "reason": "missing strict full-roll popularity data",
-      "sourceUrl": "https://www.light.gg/db/items/4206550094/"
+      "itemHash": 3681280908,
+      "itemName": "Relentless",
+      "reason": "no light.gg popularity data",
+      "sourceUrl": "https://www.light.gg/db/items/3681280908/"
+    },
+    {
+      "itemHash": 3098328572,
+      "itemName": "The Recluse",
+      "reason": "no light.gg popularity data",
+      "sourceUrl": "https://www.light.gg/db/items/3098328572/"
     },
     {
       "itemHash": 569799273,
@@ -384,7 +402,6 @@
     "739029153": "https://www.light.gg/db/items/739029153/",
     "747743636": "https://www.light.gg/db/items/747743636/",
     "747743637": "https://www.light.gg/db/items/747743637/",
-    "749483159": "https://www.light.gg/db/items/749483159/",
     "751880654": "https://www.light.gg/db/items/751880654/",
     "755130877": "https://www.light.gg/db/items/755130877/",
     "766122634": "https://www.light.gg/db/items/766122634/",
@@ -1239,7 +1256,6 @@
     "3067821200": "https://www.light.gg/db/items/3067821200/",
     "3075224551": "https://www.light.gg/db/items/3075224551/",
     "3085559077": "https://www.light.gg/db/items/3085559077/",
-    "3098328572": "https://www.light.gg/db/items/3098328572/",
     "3100452337": "https://www.light.gg/db/items/3100452337/",
     "3102162710": "https://www.light.gg/db/items/3102162710/",
     "3102421004": "https://www.light.gg/db/items/3102421004/",
@@ -1456,7 +1472,6 @@
     "3668817296": "https://www.light.gg/db/items/3668817296/",
     "3669616453": "https://www.light.gg/db/items/3669616453/",
     "3678653083": "https://www.light.gg/db/items/3678653083/",
-    "3681280908": "https://www.light.gg/db/items/3681280908/",
     "3682803680": "https://www.light.gg/db/items/3682803680/",
     "3685470415": "https://www.light.gg/db/items/3685470415/",
     "3685829362": "https://www.light.gg/db/items/3685829362/",
